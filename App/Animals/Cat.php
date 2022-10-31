@@ -11,6 +11,18 @@ class Cat {
     private $age;
     private $color;
 
+    /**
+     * __construct() est une méthode magique. 
+     * C'est une méthode qui est appelée automatiquement à un moment de la vie de l'objet
+     * Le constructeur est appelé à l'instanciation d'un objet
+     */
+    public function __construct($name, $age, $color)
+    {
+        $this->name = $name;
+        $this->age = $age;
+        $this->color = $color;
+    }
+
     public function cri()
     {
         return "miaou";
