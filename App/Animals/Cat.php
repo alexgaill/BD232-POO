@@ -1,76 +1,37 @@
 <?php
+require_once "Mammifere.php";
 
 /**
- * Grâce aux setter, je peux instancier 2 objets d'une même classe et leur attribuer des informations différentes
+ * Une classe qui extends d'une autre classe est une classe qui utilise l'héritage.
+ * 
+ * L'héritage permet de limiter les doublons. Lorsque 2 classes ont des propriétés et méthodes identiques,
+ * nous allons mettre ces éléments sur une classe parent qui sera étendue par les enfants. 
+ * La classe enfant possède ainsi les mêmes propriétés et méthodes que le parent.
  */
-class Cat {
-    // private $name = "Chachat";
-    // private $age = 3;
-    // private $color = ["blanc"];
-    private $name;
-    private $age;
-    private $color;
-
+class Cat extends Mammifere{
+    
     /**
-     * __construct() est une méthode magique. 
-     * C'est une méthode qui est appelée automatiquement à un moment de la vie de l'objet
-     * Le constructeur est appelé à l'instanciation d'un objet
+     * Constructeur de la classe Cat
+     *
+     * @param string $name Le nom de l'animal
+     * @param int $age L'âge de l'animal
+     * @param array|null $color La couleur de pelage de l'animal
+     * @param boolean $felin L'animal est-il un félin?
+     * @author Alexandre
      */
-    public function __construct($name, $age, $color)
+    public function __construct(string $name, int $age, ?array $color, bool $felin = true)
     {
-        $this->name = $name;
-        $this->age = $age;
-        $this->color = $color;
+        parent::__construct($name, $age, $color);
+        if ($felin) {
+            // Exécuter un code particulier
+            // $this->name = $this->name . " le chat";
+            $this->name .=  " le chat"; // identique à la ligne du dessus
+        }
     }
 
     public function cri()
     {
         return "miaou";
-    }
-
-    /**
-     * Cette méthode est un getter ou accesseur.
-     * Il autorise la récupération et l'utilisation d'une propriété private
-     *
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Cette méthode est un setter ou mutateur.
-     * Il autorise la modification de la valeur d'une propriété private
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function getAge()
-    {
-        return $this->age;
-    }
-
-    public function setAge($age)
-    {
-        $this->age = $age;
-    }
-
-    public function getColor()
-    {
-        return $this->color;
-    }
-
-    public function getStringColor()
-    {
-        return implode(" ", $this->color);
-        // ["blanc", "marron"] => "blanc marron"
-    }
-
-    public function setColor($color)
-    {
-        $this->color = $color;
     }
 
 }

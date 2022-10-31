@@ -11,9 +11,12 @@ require_once "App/Animals/Cat.php";
 // $cat2->setAge(3);
 // $cat2->setColor(["Rouge, Vert"]);
 
-$cat = new Cat("Chachat", 3, ["Rouge", "Vert"]);
+$cat = new Cat("Chachat", 3, ["Rouge", "Vert"], false);
 $cat2 = new Cat("Croquette", 5, ["Gris"]);
+// $cat3 = new Cat(null, 3, ["marron"], false);
 
 var_dump($cat);
 echo "<br>";
 var_dump($cat2);
+// echo "<br>";
+// var_dump($cat3);

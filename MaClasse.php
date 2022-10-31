@@ -10,9 +10,9 @@
  * La visibilité définie la portée d'utilisation de l'élément.
  * Définir les visibilité s'appelle l'encapsulation.
  * Il en existe 3 différentes:
- * - public: Une propriété ou méthode public est acessible partout dans notre code opu la classe est instanciée
- * - private: Une propriété ou méthode private n'est accessible que dans la class où elle est définie
- * - protected: 
+ * - public: Une propriété ou méthode public est acessible partout dans notre code où la classe est instanciée
+ * - private: Une propriété ou méthode private n'est accessible que dans la classe où elle est définie
+ * - protected: Une propriété ou méthode protected est accessible dans la classe où elle est définie et dans les classes enfants
  */
 class MaClasse {
     /**
