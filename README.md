@@ -4,6 +4,14 @@ Ce projet est réalisé avec la promotion **IPSSI BD232** de l'année 2022.
 
 Vous pouvez retrouver le projet sur <https://github.com/alexgaill/BD232-POO>.
 
+## Code part
+
+```sh
+    # Au chargement du projet, Exécutez la commande suivante:
+    composer install
+    # Cette commande chargera l'autoloader et les dépendances nécessaires au projet
+```
+
 ## TP du cours POO
 
 > Chaque groupe choisira l'un des tp suivant. 
