@@ -27,9 +27,9 @@ echo $chien["age"];
 
 class Chien {
 
-    $age = 3;
+    public $age = 3;
 
-    $pelage = ['gris', 'blanc'];
+    public $pelage = ['gris', 'blanc'];
 
-    $nom = "Pepper";
+    public $nom = "Pepper";
 }
