@@ -6,6 +6,9 @@ Vous pouvez retrouver le projet sur <https://github.com/alexgaill/BD232-POO>.
 
 ## TP du cours POO
 
+> Chaque groupe choisira l'un des tp suivant. 
+> Les notions vues en cours doivent être implémentée dans le projet.
+
 > - [Agence immobilière](tp/agency.md)
 > - [Association animaux](tp/association.md)
 > - [Restaurant](tp/restaurant.md)
