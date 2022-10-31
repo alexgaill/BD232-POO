@@ -9,6 +9,8 @@ require_once "Mammifere.php";
  * La classe enfant possède ainsi les mêmes propriétés et méthodes que le parent.
  */
 class Cat extends Mammifere{
+
+    public const CRIDUCHAT = "miaou";
     
     /**
      * Constructeur de la classe Cat
@@ -29,9 +31,14 @@ class Cat extends Mammifere{
         }
     }
 
+    public function doublecri()
+    {
+        return self::CRIDUCHAT . ' ' . self::CRIDUCHAT;
+    }
+
     public function cri()
     {
-        return "miaou";
+        return self::CRIDUCHAT;
     }
 
 }

@@ -24,6 +24,19 @@ class MaClasse {
 
     private $property3;
 
+    public static $staticProp1 = "Bye";
+    private static $staticProp2 = " everyone";
+
+    public static function aurevoir ()
+    {
+        return self::$staticProp1 . self::$staticProp2;
+    }
+
+    public function adieu()
+    {
+        return self::$staticProp1 . ' ' . $this->property2;
+    }
+
     /**
      * helloWorld() est une méthode, elle retourne une chaine de caractère dans cet exemple
      */
@@ -53,5 +66,10 @@ class MaClasse {
     function getProperty2()
     {
         return $this->property2;
+    }
+    
+    function setProperty2(string $prop)
+    {
+        $this->property2 = $prop;
     }
 }
