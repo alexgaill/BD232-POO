@@ -1,5 +1,5 @@
 <?php
-require_once "Mammifere.php";
+namespace App\Animals;
 
 /**
  * Une classe qui extends d'une autre classe est une classe qui utilise l'héritage.

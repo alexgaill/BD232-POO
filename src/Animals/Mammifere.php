@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Animals;
 /**
  * Grâce aux setter, je peux instancier 2 objets d'une même classe et leur attribuer des informations différentes
  */

@@ -1,5 +1,5 @@
 <?php
-
+namespace App;
 /**
  * Une classe est un moule permettant de générer autant d'objets qu'on le souhaite
  * Une classe contient des propriétés et des méthodes.
@@ -42,7 +42,8 @@ class MaClasse {
      */
     function helloWorld()
     {
-        return "Hello world!";
+        // return "Hello world!";
+        return ";dkjeaifdjzieokdloazkjfiozhdolkazpldkeiofhizoa";
     }
 
     function hello()
