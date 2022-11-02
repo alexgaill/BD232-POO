@@ -77,7 +77,7 @@ class Database {
     }
 
     /**
-     * Retourne la connexion à la BDD
+     * Retourne l'instance de connexion à la BDD
      *
      * @return \PDO|null
      */

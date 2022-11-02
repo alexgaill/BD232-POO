@@ -54,10 +54,29 @@ class AppFixtures {
                 $prepare->execute();
                 // On récupère l'id de la dernière catégorie insérée
                 $category = $this->pdo->lastInsertId('category');
+                $this->createPosts($category);
 
             } catch (\PDOException $e) {
                 echo $e->getMessage();
             }
+        }
+    }
+
+    /**
+     * Créé de faux articles
+     *
+     * @param integer $category
+     * @return void
+     */
+    private function createPosts(int $category): void
+    {
+        for ($j=0; $j < 10; $j++) { 
+            $stmt = "INSERT INTO post (title, content, created_at, category) VALUES (:title, :content, NOW(), $category)";
+            $prepare = $this->pdo->prepare($stmt);
+            $prepare->bindValue("title", $this->faker->words(5, true));
+            $prepare->bindValue("content", $this->faker->paragraphs(5, true));
+            
+            $prepare->execute();
         }
     }
 }

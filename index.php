@@ -2,6 +2,7 @@
 
 use App\Fixtures\AppFixtures;
 use App\Manager\CategoryManager;
+use App\Manager\PostManager;
 
 define("ROOT", __DIR__);
 require ROOT. "/vendor/autoload.php";
@@ -11,7 +12,8 @@ require ROOT. "/vendor/autoload.php";
 // echo "Les fixtures sont chargées";
 
 // Affiche notre page de catégories
-(new CategoryManager)->getCategories();
+// (new CategoryManager)->getCategories();
+(new PostManager)->getPosts();
 
 
 
