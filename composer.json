@@ -7,5 +7,7 @@
             "Core\\": "Core/"
         }
     },
-    "require": {}
+    "require-dev": {
+        "fakerphp/faker": "^1.20"
+    }
 }
