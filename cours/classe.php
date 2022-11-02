@@ -1,12 +1,14 @@
 <?php
 
+use App\MaClasse;
+
 /**
  * Pour générer un objet, 
  * nous allons devoir charger la class sur l'index
  * et l'instancier.
  */
 
-require_once "MaClasse.php";
+// require_once "MaClasse.php";
 
 /**
  * J'instancie la classe MaClasse et obtiens un objet

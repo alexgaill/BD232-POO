@@ -24,6 +24,19 @@ class MaClasse {
 
     private $property3;
 
+    /**
+     * Une classe peut avoir des propriétés et méthodes static. Ces éléments appartiennent à la classe et non à l'objet.
+     * Ils nous permettent de récupérer une information ou d'effectuer une action sans avoir à instancier la classe.
+     * De plus, appartenant à la class, si une propriété est modifiée, elle sera modifiée pour tous les objets créés.
+     * 
+     * Les propriétés et méthodes static ont une visibilité.
+     * Pour les récupérer dans la class où ils sont définis, on va utiliser self::$propriété.
+     * self faisant référence à la class et :: étant l'opérateur de résolution de portée.
+     * 
+     * Pour utiliser staticProp1 en dehors de la class, on écrira MaClasse::$staticProp1 
+     *
+     * @var string
+     */
     public static $staticProp1 = "Bye";
     private static $staticProp2 = " everyone";
 
@@ -32,6 +45,12 @@ class MaClasse {
         return self::$staticProp1 . self::$staticProp2;
     }
 
+    /**
+     * Une méthode non static peut utiliser des éléments statics sans problème.
+     * Mais l'inverse n'est pas possible.
+     *
+     * @return string
+     */
     public function adieu()
     {
         return self::$staticProp1 . ' ' . $this->property2;
@@ -42,8 +61,7 @@ class MaClasse {
      */
     function helloWorld()
     {
-        // return "Hello world!";
-        return ";dkjeaifdjzieokdloazkjfiozhdolkazpldkeiofhizoa";
+        return "Hello world!";
     }
 
     function hello()

@@ -1,5 +1,7 @@
 <?php
 
+// require_once "App/Animals/Cat.php";
+// require_once "App/MaClasse.php";
 
 // $cat = new Cat();
 // $cat->setName("Chachat");

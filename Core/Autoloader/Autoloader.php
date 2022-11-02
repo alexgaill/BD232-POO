@@ -15,6 +15,13 @@ class Autoloader{
     //     require "App/". $class . ".php";
     // });
 
+    // Dans index:
+    // On définit une constante dans un fichier PHP pour stocker le chemin en dur du projet
+    // On charge notre autoloader
+    // require_once ROOT ."/Core/Autoloader/Autoloader.php" ;
+    // On appel la méthode static register
+    // Autoloader::register();
+
     public static function autoload($class)
     {
         $class = str_replace("\\", "/", $class);

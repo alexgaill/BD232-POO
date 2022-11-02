@@ -10,6 +10,15 @@ namespace App\Animals;
  */
 class Cat extends Mammifere{
 
+    /**
+     * Une classe peut également avoir des constantes. Une constante est une valeur stockée qui ne peut être changée.
+     * Une constante a une visibilité.
+     * 
+     * Elle va être utilisée comme les éléments static car elle appartient à la classe et non à l'objet:
+     * 
+     * self::CRIDUCHAT
+     * Cat::CRIDUCHAT
+     */
     public const CRIDUCHAT = "miaou";
     
     /**
