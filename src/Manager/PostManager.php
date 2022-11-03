@@ -6,7 +6,7 @@ use Core\Database\Database;
 class PostManager {
 
     /**
-     * Undocumented function
+     * Affiche une page contenant tous les articles
      *
      * @return void
      */

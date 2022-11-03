@@ -15,8 +15,8 @@ require ROOT. "/vendor/autoload.php";
 // Affiche notre page de catégories
 // (new CategoryManager)->getCategories();
 // (new PostManager)->getPosts();
-// (new CategoryController)->index();
-(new CategoryController)->show();
+(new CategoryController)->index();
+// (new CategoryController)->show();
 
 
 
