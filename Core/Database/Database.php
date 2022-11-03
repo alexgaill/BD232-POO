@@ -36,7 +36,7 @@ class Database {
      *
      * @var \PDO|null
      */
-    private ?\PDO $pdo;
+    protected ?\PDO $pdo;
 
     /**
      * Exécute la connexion à la BDD
@@ -84,5 +84,26 @@ class Database {
     public function getPdo(): ?\PDO
     {
         return $this->pdo;
+    }
+
+    /**
+     * Récupère les données en BDD
+     *
+     * @param string $stmt requête à exécuter
+     * @param boolean $one définit si une seule donnée est à récupérer ou non
+     * @return array<object>|object
+     */
+    protected function getData (string $stmt, bool $one = false): array|object
+    {
+        $query = $this->pdo->query($stmt, \PDO::FETCH_OBJ);
+        if ($one) {
+            $data = $query->fetch();
+        } else {
+            $data = $query->fetchAll();
+        }
+
+        return $data ? 
+            $data : 
+            throw new \Exception("Aucune donnée n'a été trouvée");
     }
 }
