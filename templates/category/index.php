@@ -9,8 +9,8 @@
     <tbody>
         <?php foreach ($categories as $category) : ?>
             <tr>
-                <td><?= $category->id ?></td>
-                <td><?= $category->name ?></td>
+                <td><?= $category->getId() ?></td>
+                <td><?= $category->getName() ?></td>
             </tr>
         <?php endforeach; ?>
     </tbody>

@@ -39,6 +39,13 @@ class Database {
     protected ?\PDO $pdo;
 
     /**
+     * Nom de l'entité associée au chargement des données
+     *
+     * @var string
+     */
+    protected string $entity;
+
+    /**
      * Exécute la connexion à la BDD
      */
     public function __construct()
@@ -95,12 +102,29 @@ class Database {
      */
     protected function getData (string $stmt, bool $one = false): array|object
     {
-        $query = $this->pdo->query($stmt, \PDO::FETCH_OBJ);
+        $query = $this->pdo->query($stmt, \PDO::FETCH_CLASS, "App\Entity\\". $this->entity);
         if ($one) {
             $data = $query->fetch();
         } else {
             $data = $query->fetchAll();
         }
+        var_dump($data);
+
+        // // Je récupère les données de la table catégorie
+        // // SELECT * FROM category
+        // $data = [
+        //     0 => [
+        //         'id' => 1,
+        //         'name' => "lorem ipsum"
+        //     ]
+        // ];
+        // // Les données doivent être associée à la classe App\Entity\Category
+        // // La class Category a 2 properties => $id et $name =>
+        // // $category[0] => $id = $data[0]['id']
+        // // $category[0] => $name = $data[0]['name']
+        // $data = [
+        //     new Categorie()
+        // ];
 
         return $data ? 
             $data : 

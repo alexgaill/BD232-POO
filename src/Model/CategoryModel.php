@@ -12,6 +12,7 @@ use Core\Model\DefaultModel;
 class CategoryModel extends DefaultModel{
     
     protected string $table = 'category';
+    protected string $entity = 'Category';
 
     // /**
     //  * Retourne l'ensemble des catégories
