@@ -1,6 +1,7 @@
 <?php
 namespace App\Model;
 
+use App\Entity\Category;
 use Core\Model\DefaultModel;
 
 /**
@@ -13,6 +14,14 @@ class CategoryModel extends DefaultModel{
     
     protected string $table = 'category';
     protected string $entity = 'Category';
+
+    public function save(Category $category)
+    {
+        var_dump($category());
+        $stmt = "INSERT INTO category (name) VALUES (:name)";
+        $prepare = $this->pdo->prepare($stmt);
+        $prepare->execute($category());
+    }
 
     // /**
     //  * Retourne l'ensemble des catégories

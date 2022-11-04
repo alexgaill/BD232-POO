@@ -4,6 +4,7 @@
         <tr>
             <th>#</th>
             <th>Nom</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -11,6 +12,7 @@
             <tr>
                 <td><?= $category->getId() ?></td>
                 <td><?= $category->getName() ?></td>
+                <td><a href="/?page=category_show&id=<?= $category->getId() ?>"><button class="btn btn-info">Voir plus</button></a></td>
             </tr>
         <?php endforeach; ?>
     </tbody>

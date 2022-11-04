@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Model\CategoryModel;
 use Core\Controller\DefaultController;
 
@@ -37,7 +38,7 @@ class CategoryController extends DefaultController{
      */
     public function show()
     {
-        if (isset($_GET['id']) && is_int(intval($_GET['id']))) {
+        if (isset($_GET['id']) && preg_match("(\d+)", $_GET['id'])) {
             $id = intval($_GET['id']);
         } else {
             throw new \UnexpectedValueException("L'id attendu doit être un integer!");
@@ -47,5 +48,16 @@ class CategoryController extends DefaultController{
         $this->render("category/show", [
             'category' => $category
         ]);
+    }
+
+    public function add()
+    {
+        if (!empty($_POST) && isset($_POST['name'])) {
+            $category= new Category;
+            $category->setName(htmlspecialchars($_POST['name']));
+            $this->model->save($category);
+        }
+
+        $this->render("category/add");
     }
 }

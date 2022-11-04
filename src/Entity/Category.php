@@ -1,7 +1,9 @@
 <?php
 namespace App\Entity;
 
-class Category {
+use Core\Entity\DefaultEntity;
+
+class Category extends DefaultEntity{
 
     /**
      * Id de la catégory
