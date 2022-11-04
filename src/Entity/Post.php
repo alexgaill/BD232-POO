@@ -15,7 +15,7 @@ final class Post {
 
     public function __construct()
     {
-        if ($this->categoryId && $this->name) {
+        if (isset($this->categoryId) && isset($this->name)) {
             $this->category = new Category;
             $this->category->hydrateCategory([
                 "categoryId" => $this->categoryId,
