@@ -1,9 +1,11 @@
 <?php
 namespace App\Model;
 
+use App\Entity\Post;
 use Core\Model\DefaultModel;
+use Core\Model\ModelInterface;
 
-class PostModel extends DefaultModel {
+final class PostModel extends DefaultModel implements ModelInterface{
 
     protected string $table = 'post';
     protected string $entity = 'Post';
@@ -20,6 +22,16 @@ class PostModel extends DefaultModel {
         INNER JOIN category ON category.id = post.category 
         ORDER BY id ASC";
         return $this->getData($stmt);
+    }
+
+    public function findBy(array $criteria = []): array
+    {
+        return [];
+    }
+
+    public function findOneBy(array $criteria = []): object
+    {
+        return new Post;
     }
 
     /**

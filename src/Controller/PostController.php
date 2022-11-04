@@ -6,7 +6,7 @@ use App\Model\PostModel;
 use App\Model\CategoryModel;
 use Core\Controller\DefaultController;
 
-class PostController extends DefaultController{
+final class PostController extends DefaultController{
 
     private PostModel $model;
 

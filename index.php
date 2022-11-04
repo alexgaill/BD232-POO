@@ -1,13 +1,13 @@
 <?php
 
+use Core\Routeur\Routeur;
 use App\Manager\PostManager;
 use App\Fixtures\AppFixtures;
 use App\Manager\CategoryManager;
+use App\Controller\HomeController;
 use App\Controller\PostController;
 use App\Controller\ErrorController;
 use App\Controller\CategoryController;
-use App\Controller\HomeController;
-use Core\Routeur\Routeur;
 
 define("ROOT", __DIR__);
 require ROOT . "/vendor/autoload.php";
@@ -23,4 +23,3 @@ Routeur::routes();
 // (new CategoryController)->show();
 // (new PostController)->index();
 // (new CategoryController)->add();
-

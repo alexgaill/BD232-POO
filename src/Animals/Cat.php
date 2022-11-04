@@ -45,7 +45,7 @@ class Cat extends Mammifere{
         return self::CRIDUCHAT . ' ' . self::CRIDUCHAT;
     }
 
-    public function cri()
+    public function cri(): string
     {
         return self::CRIDUCHAT;
     }

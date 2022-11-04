@@ -1,4 +1,6 @@
 <?php
+
+use App\Animals\Mammifere;
 require_once "Mammifere.php";
 
 class Dog extends Mammifere{
@@ -11,7 +13,7 @@ class Dog extends Mammifere{
         }
     }
 
-    public function cri()
+    public function cri(): string
     {
         return "ouaf";
     }

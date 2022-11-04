@@ -5,7 +5,7 @@ use App\Entity\Category;
 use App\Model\CategoryModel;
 use Core\Controller\DefaultController;
 
-class CategoryController extends DefaultController{
+final class CategoryController extends DefaultController{
 
     private CategoryModel $model;
     

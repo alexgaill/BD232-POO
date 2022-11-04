@@ -3,7 +3,7 @@ namespace App\Animals;
 /**
  * Grâce aux setter, je peux instancier 2 objets d'une même classe et leur attribuer des informations différentes
  */
-class Mammifere {
+abstract class Mammifere {
     // private $name = "Chachat";
     // private $age = 3;
     // private $color = ["blanc"];
@@ -77,4 +77,5 @@ class Mammifere {
         $this->color = $color;
     }
 
+    abstract public function cri(): string;
 }

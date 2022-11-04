@@ -3,7 +3,7 @@ namespace App\Controller;
 
 use Core\Controller\DefaultController;
 
-class ErrorController extends DefaultController {
+final class ErrorController extends DefaultController {
 
     public function error(\Exception $e)
     {

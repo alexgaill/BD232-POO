@@ -5,7 +5,7 @@ use Faker\Factory;
 use Faker\Generator;
 use Core\Database\Database;
 
-class AppFixtures {
+final class AppFixtures {
 
     /**
      * Connexion à la BDD

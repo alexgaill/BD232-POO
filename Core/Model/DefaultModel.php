@@ -3,7 +3,7 @@ namespace Core\Model;
 
 use Core\Database\Database;
 
-class DefaultModel extends Database {
+abstract class DefaultModel extends Database implements ModelInterface, ModelCriteriaInterface{
 
     protected string $table;
 
@@ -29,4 +29,8 @@ class DefaultModel extends Database {
         $stmt = "SELECT * FROM ". $this->table . " WHERE id = $id"; 
         return $this->getData($stmt, true);
     }
+
+    public abstract function findBy(array $criteria = []): array;
+
+    public abstract function findOneBy(array $criteria = []): object;
 }

@@ -3,6 +3,7 @@ namespace App\Model;
 
 use App\Entity\Category;
 use Core\Model\DefaultModel;
+use Core\Model\ModelInterface;
 
 /**
  * Model permettant de récupérer les catégories
@@ -10,7 +11,7 @@ use Core\Model\DefaultModel;
  * @method array<object> findAll()
  * @method object find(int $id)
  */
-class CategoryModel extends DefaultModel{
+final class CategoryModel extends DefaultModel implements ModelInterface{
     
     protected string $table = 'category';
     protected string $entity = 'Category';
@@ -21,6 +22,16 @@ class CategoryModel extends DefaultModel{
         $stmt = "INSERT INTO category (name) VALUES (:name)";
         $prepare = $this->pdo->prepare($stmt);
         $prepare->execute($category());
+    }
+
+    public function findBy(array $criteria = []): array
+    {
+        return [];
+    }
+
+    public function findOneBy(array $criteria = []): object
+    {
+        return new Category;
     }
 
     // /**

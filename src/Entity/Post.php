@@ -1,7 +1,7 @@
 <?php
 namespace App\Entity;
 
-class Post {
+final class Post {
 
     private int $id;
 

@@ -3,7 +3,7 @@ namespace App\Entity;
 
 use Core\Entity\DefaultEntity;
 
-class Category extends DefaultEntity{
+final class Category extends DefaultEntity{
 
     /**
      * Id de la catégory

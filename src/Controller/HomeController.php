@@ -3,7 +3,7 @@ namespace App\Controller;
 
 use Core\Controller\DefaultController;
 
-class HomeController extends DefaultController {
+final class HomeController extends DefaultController {
 
     public function home()
     {
