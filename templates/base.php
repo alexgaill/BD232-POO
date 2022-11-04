@@ -9,7 +9,8 @@
     <title>SuperBlog</title>
 </head>
 <body>
-    <header></header>
+    <header>
+    </header>
     <main class="container">
         <!-- Ajouter contenu de main -->
         <?= $content ?>

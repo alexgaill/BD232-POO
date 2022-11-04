@@ -1,6 +1,7 @@
 <?php
 
 use App\Controller\CategoryController;
+use App\Controller\PostController;
 use App\Fixtures\AppFixtures;
 use App\Manager\CategoryManager;
 use App\Manager\PostManager;
@@ -15,11 +16,6 @@ require ROOT. "/vendor/autoload.php";
 // Affiche notre page de catégories
 // (new CategoryManager)->getCategories();
 // (new PostManager)->getPosts();
-(new CategoryController)->index();
+// (new CategoryController)->index();
 // (new CategoryController)->show();
-
-
-
-
-
-
+(new PostController)->index();

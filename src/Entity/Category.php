@@ -33,4 +33,14 @@ class Category {
     {
         $this->name = $name;
     }
+
+    public function hydrateCategory(array $data)
+    {
+        if (isset($data['categoryId'])) {
+            $this->id = $data['categoryId'];
+        }
+        if (isset($data['name'])) {
+            $this->name = $data['name'];
+        }
+    }
 }

@@ -1,8 +1,9 @@
 <?php
 namespace App\Controller;
 
-use App\Model\CategoryModel;
+use App\Entity\Post;
 use App\Model\PostModel;
+use App\Model\CategoryModel;
 use Core\Controller\DefaultController;
 
 class PostController extends DefaultController{
@@ -19,8 +20,10 @@ class PostController extends DefaultController{
         $posts = $this->model->findAllWithCategory();
         // $categories = (new CategoryModel)->findAll();
 
-        require_once ROOT. "/templates/posts/index.php";
-        // $this->render();
+        // require_once ROOT. "/templates/posts/index.php";
+        $this->render('post/index', [
+            'posts' => $posts,
+        ]);
     }
 
     public function show(): void
@@ -30,9 +33,14 @@ class PostController extends DefaultController{
         } else {
             throw new \UnexpectedValueException("L'id attendu doit être un integer!");
         }
-        $post = $this->model->findWithCategory($id);
+        // $post = $this->model->findWithCategory($id);
 
-        require_once ROOT. "/templates/posts/show.php";
+        // require_once ROOT. "/templates/posts/show.php";
+        $this->render('post/show', [
+            'post' => $this->model->findWithCategory($id)
+        ]);
 
     }
+
+    public function save(){}
 }

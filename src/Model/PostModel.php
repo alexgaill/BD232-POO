@@ -6,6 +6,8 @@ use Core\Model\DefaultModel;
 class PostModel extends DefaultModel {
 
     protected string $table = 'post';
+    protected string $entity = 'Post';
+
     /**
      * Retourne l'ensemble des articles présents en BDD avec les informations de la catégorie liée
      *
@@ -13,7 +15,7 @@ class PostModel extends DefaultModel {
      */
     public function findAllWithCategory(): array
     {
-        $stmt = "SELECT post.id, title, content, category.id AS categoryId, name 
+        $stmt = "SELECT post.id, title, content, created_at, category.id AS categoryId, category.name 
         FROM post 
         INNER JOIN category ON category.id = post.category 
         ORDER BY id ASC";
